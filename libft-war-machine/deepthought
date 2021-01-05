@@ -1,0 +1,227 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+DESKTOP-73LBH3L
+Linux 4.4.0-19041-Microsoft x86_64
+$> date
+Tue Jan  5 18:08:38 KST 2021
+$> gcc --version
+gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+$> clang --version
+
+= libft.h=======================================================================
+$> norminette libft.h | grep -E '(Error|Warning)'
+norminette : command not found
+
+= Compiling libft ==============================================================
+$> make re
+[INFO] Objects removed!
+[INFO] Library [libft.a] removed!
+[INFO] Library [libft.a] created!
+
+$> ls -la libft.a
+-rwxrwxrwx 1 seonchoi seonchoi 15770 Jan  5 18:08 /mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/dirlibft/libft.a
+
+= Part1_functions ==============================================================
+
+= ft_memset.c ==================================================================
+$> norminette ft_memset.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memset.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_bzero.c ===================================================================
+$> norminette ft_bzero.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_bzero.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_calloc.c ==================================================================
+Nothing turned in
+
+= ft_memcpy.c ==================================================================
+$> norminette ft_memcpy.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcpy.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_memccpy.c =================================================================
+$> norminette ft_memccpy.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memccpy.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_memmove.c =================================================================
+$> norminette ft_memmove.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memmove.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_memchr.c ==================================================================
+$> norminette ft_memchr.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memchr.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_memcmp.c ==================================================================
+$> norminette ft_memcmp.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memcmp.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_strlen.c ==================================================================
+$> norminette ft_strlen.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlen.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_strdup.c ==================================================================
+Nothing turned in
+
+= ft_strlcat.c =================================================================
+$> norminette ft_strlcat.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcat.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_strlcpy.c =================================================================
+$> norminette ft_strlcpy.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlcpy.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_strchr.c ==================================================================
+$> norminette ft_strchr.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strchr.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
+
+= ft_strrchr.c =================================================================
+Nothing turned in
+
+= ft_strnstr.c =================================================================
+Nothing turned in
+
+= ft_strncmp.c =================================================================
+Nothing turned in
+
+= ft_atoi.c ====================================================================
+Nothing turned in
+
+= ft_isalpha.c =================================================================
+Nothing turned in
+
+= ft_isdigit.c =================================================================
+Nothing turned in
+
+= ft_isalnum.c =================================================================
+Nothing turned in
+
+= ft_isascii.c =================================================================
+Nothing turned in
+
+= ft_isprint.c =================================================================
+Nothing turned in
+
+= ft_toupper.c =================================================================
+Nothing turned in
+
+= ft_tolower.c =================================================================
+Nothing turned in
+
+= Part2_functions ==============================================================
+
+= ft_strmapi.c =================================================================
+Nothing turned in
+
+= ft_substr.c ==================================================================
+Nothing turned in
+
+= ft_strjoin.c =================================================================
+Nothing turned in
+
+= ft_strtrim.c =================================================================
+Nothing turned in
+
+= ft_split.c ===================================================================
+Nothing turned in
+
+= ft_itoa.c ====================================================================
+Nothing turned in
+
+= ft_putchar_fd.c ==============================================================
+Nothing turned in
+
+= ft_putstr_fd.c ===============================================================
+Nothing turned in
+
+= ft_putendl_fd.c ==============================================================
+Nothing turned in
+
+= ft_putnbr_fd.c ===============================================================
+Nothing turned in
+
+= Bonus_functions ==============================================================
+
+= ft_lstnew.c ==================================================================
+Nothing turned in
+
+= ft_lstdelone.c ===============================================================
+Nothing turned in
+
+= ft_lstclear.c ================================================================
+Nothing turned in
+
+= ft_lstadd_front.c ============================================================
+Nothing turned in
+
+= ft_lstadd_back.c =============================================================
+Nothing turned in
+
+= ft_lstsize.c =================================================================
+Nothing turned in
+
+= ft_lstiter.c =================================================================
+Nothing turned in
+
+= ft_lstmap.c ==================================================================
+Nothing turned in
+
+= ft_lstlast.c =================================================================
+Nothing turned in
