@@ -6,7 +6,7 @@
 #    By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 23:46:05 by jaleman           #+#    #+#              #
-#    Updated: 2021/01/05 18:08:22 by seonchoi         ###   ########.fr        #
+#    Updated: 2021/01/05 22:40:15 by seonchoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RANLIB  = ranlib
 NAME    = libft.a
 HEAD    = libft.h
 SRCS    = ft_bzero.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
-ft_memset.c ft_strchr.c ft_strlcat.c ft_strlcpy.c ft_strlen.c \
+			ft_memset.c ft_strchr.c ft_strlcat.c ft_strlcpy.c ft_strlen.c \
 
 OBJS    = $(SRCS:.c=.o)
 
