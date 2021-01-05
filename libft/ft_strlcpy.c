@@ -6,9 +6,11 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 16:35:27 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/05 16:46:18 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/05 21:02:44 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
