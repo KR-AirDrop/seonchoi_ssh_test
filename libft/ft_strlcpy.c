@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 16:35:27 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/05 22:29:26 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/05 22:35:00 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ size_t	ft_strlcpy(char *dst, char *src, size_t size)
 	}
 	if (size > 0)
 		dst[a] = '\0';
-
 	return (ft_strlen(src));
 }
