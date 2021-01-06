@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 12:45:48 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/06 13:13:10 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/06 13:15:32 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int		check_over_range(unsigned long long nbr, int sign)
 
 int		ft_atoi(const char *str)
 {
-	int		i;
-	int		sign;
-	int		nbr;
+	int						i;
+	int						sign;
+	unsigned long long		nbr;
 
 	i = 0;
 	sign = 1;
