@@ -6,10 +6,11 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 12:45:48 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/06 13:02:28 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/06 13:08:35 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <limits.h>
 #include "libft.h"
 
 int		ft_atoi(const char *str)
@@ -34,4 +35,13 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	return (nbr * sign);
+}
+
+int		check_over_range(unsigned long long sum, int sign)
+{
+	if (sum > LLONG_MAX - 1 && sign == -1)
+		return (0);
+	if (sum > LLONG_MAX && sign == 1)
+		return (-1);
+	return (sum * sign);
 }
