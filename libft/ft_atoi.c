@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 12:45:48 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/06 13:08:35 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/06 13:11:34 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,15 @@ int		ft_atoi(const char *str)
 		nbr = (nbr * 10) + (str[i] - '0');
 		i++;
 	}
+	nbr = check_over_range(nbr, sign);
 	return (nbr * sign);
 }
 
-int		check_over_range(unsigned long long sum, int sign)
+int		check_over_range(unsigned long long nbr, int sign)
 {
-	if (sum > LLONG_MAX - 1 && sign == -1)
+	if (nbr > LLONG_MAX - 1 && sign == -1)
 		return (0);
-	if (sum > LLONG_MAX && sign == 1)
+	if (nbr > LLONG_MAX && sign == 1)
 		return (-1);
-	return (sum * sign);
+	return (nbr * sign);
 }
