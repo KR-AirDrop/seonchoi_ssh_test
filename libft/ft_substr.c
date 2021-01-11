@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 17:17:33 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/11 17:27:39 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:33:56 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	start--;
 	i = 0;
-	if (!(str = (char *)malloc(sizeof(char)) * len))
+	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	while (s[start])
 	{
@@ -29,5 +29,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 		start++;
 	}
+	str[i] = '\0';
 	return (str);
 }
