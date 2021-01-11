@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 17:17:33 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/11 17:41:11 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:54:52 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	size_t i;
 	char *str;
 
-	if (start == 0)
-		return (NULL);
-	start--;
+    if (!s)
+    	return (NULL);
+    if (ft_strlen(s) < start)
+    	return (ft_strdup(""));
+	if (start > 0)
+		start--;
 	i = 0;
 	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
 		return (NULL);
