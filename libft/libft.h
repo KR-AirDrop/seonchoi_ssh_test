@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 15:32:09 by jaleman           #+#    #+#             */
-/*   Updated: 2021/01/11 18:01:46 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/11 18:06:06 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ char				*ft_strrchr(const char *s, int c);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strcpy(char *dst, const char *src);
-char				*ft_strlcpy(char *dst, const char *src, size_t len);
+char				*ft_strncpy(char *dst, const char *src, size_t len);
+size_t				ft_strlcpy(char *dst, char *src, size_t size);
 char				*ft_strdup(const char *s1);
 size_t				ft_strlen(const char *str);
 char				*ft_strstr(const char *big, const char *little);
