@@ -6,13 +6,30 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:24:44 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/13 14:25:59 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:39:07 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static size_t	ft_nbrlen(int nbr)
+{
+	int		len;
+
+	len = 0;
+	if (nbr == 0)
+		return (1);
+	if (nbr < len)
+		len += 1;
+	while (nbr != 0)
+	{
+		nbr = nbr / 10;
+		len++;
+	}
+	return (len);
+}
+
+char			*ft_itoa(int n)
 {
 	size_t	i;
 	size_t	n_size;
