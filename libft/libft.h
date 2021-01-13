@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 15:32:09 by jaleman           #+#    #+#             */
-/*   Updated: 2021/01/13 14:35:27 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:45:20 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,7 +123,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 ** Useful functions created during 42 Piscine.
 */
-size_t				ft_nbrlen(int nbr);
+
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 
