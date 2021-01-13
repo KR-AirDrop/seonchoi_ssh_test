@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 15:32:09 by jaleman           #+#    #+#             */
-/*   Updated: 2021/01/13 14:45:20 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:53:03 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,6 @@ int					ft_isspace(int c);
 int					ft_isprint(int c);
 
 /*
-** Functions from stdio.h
-*/
-void				ft_putchar(char c);
-void				ft_putnbr(int n);
-
-/*
 ** Functions from 42 by type string.
 */
 void				*ft_memalloc(size_t size);
@@ -100,9 +94,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 */
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(const char *s, int fd);
-void				ft_putendl(const char *s);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_putstr(const char *s);
 void				ft_putstr_fd(const char *s, int fd);
 
 /*
