@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 15:32:09 by jaleman           #+#    #+#             */
-/*   Updated: 2021/01/11 18:06:06 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:35:27 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,8 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmap(const char *s, char (*f)(char));
 char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char				*ft_strnew(size_t size);
-char				**ft_strsplit(const char *s, char c);
-char				*ft_strtrim(char const *s);
-char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strtrim(char const *s, char const *set);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 
 /*
 ** Functions from 42 by type stdio.
@@ -125,8 +124,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 ** Useful functions created during 42 Piscine.
 */
 size_t				ft_nbrlen(int nbr);
-size_t				ft_wordcount(const char *s, char c);
-size_t				ft_wordlen(const char *s, char c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 
