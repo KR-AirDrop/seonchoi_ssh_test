@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 13:04:55 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/05 22:51:22 by seonchoi         ###   ########.fr       */
+/*   Created: 2021/01/11 22:50:07 by seonchoi          #+#    #+#             */
+/*   Updated: 2021/01/13 14:22:48 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t			i;
-	unsigned char	*udst;
-	unsigned char	*usrc;
+	size_t	len;
+	char	*res;
 
-	i = 0;
-	if (dst == '\0' && src == '\0')
+	if (!s1 || !set)
 		return (NULL);
-	udst = (unsigned char *)dst;
-	usrc = (unsigned char *)src;
-	while (i < n)
-	{
-		udst[i] = usrc[i];
-		i++;
-	}
-	return (dst);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	len = ft_strlen(s1);
+	while (len && ft_strchr(set, s1[len]))
+		len--;
+	res = ft_substr((char *)s1, 0, len + 1);
+	return (res);
 }

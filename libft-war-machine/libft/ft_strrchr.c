@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 13:04:55 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/05 22:51:22 by seonchoi         ###   ########.fr       */
+/*   Created: 2021/01/06 11:50:18 by seonchoi          #+#    #+#             */
+/*   Updated: 2021/01/06 11:50:20 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*udst;
-	unsigned char	*usrc;
+	int		i;
+	int		j;
 
-	i = 0;
-	if (dst == '\0' && src == '\0')
-		return (NULL);
-	udst = (unsigned char *)dst;
-	usrc = (unsigned char *)src;
-	while (i < n)
-	{
-		udst[i] = usrc[i];
-		i++;
-	}
-	return (dst);
+	i = ft_strlen(s);
+	j = 0;
+	while (i >= j)
+		if (s[i - j++] == c)
+			return ((char *)&s[i - (j - 1)]);
+	return (NULL);
 }

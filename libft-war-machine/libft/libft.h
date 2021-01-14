@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 15:32:09 by jaleman           #+#    #+#             */
-/*   Updated: 2021/01/05 12:38:27 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:53:03 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
+size_t				ft_strlcpy(char *dst, char *src, size_t size);
 char				*ft_strdup(const char *s1);
 size_t				ft_strlen(const char *str);
 char				*ft_strstr(const char *big, const char *little);
@@ -71,12 +72,6 @@ int					ft_isspace(int c);
 int					ft_isprint(int c);
 
 /*
-** Functions from stdio.h
-*/
-void				ft_putchar(char c);
-void				ft_putnbr(int n);
-
-/*
 ** Functions from 42 by type string.
 */
 void				*ft_memalloc(size_t size);
@@ -91,18 +86,15 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmap(const char *s, char (*f)(char));
 char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char				*ft_strnew(size_t size);
-char				**ft_strsplit(const char *s, char c);
-char				*ft_strtrim(char const *s);
-char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strtrim(char const *s, char const *set);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 
 /*
 ** Functions from 42 by type stdio.
 */
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(const char *s, int fd);
-void				ft_putendl(const char *s);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_putstr(const char *s);
 void				ft_putstr_fd(const char *s, int fd);
 
 /*
@@ -123,9 +115,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 ** Useful functions created during 42 Piscine.
 */
-size_t				ft_nbrlen(int nbr);
-size_t				ft_wordcount(const char *s, char c);
-size_t				ft_wordlen(const char *s, char c);
+
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 

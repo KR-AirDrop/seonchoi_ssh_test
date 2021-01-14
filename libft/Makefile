@@ -6,7 +6,7 @@
 #    By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 23:46:05 by jaleman           #+#    #+#              #
-#    Updated: 2021/01/14 17:01:08 by seonchoi         ###   ########.fr        #
+#    Updated: 2021/01/14 17:24:25 by seonchoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS    = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr
 
 BONUS = ft_lstnew.c
 
-OBJS_BONUS = $(BONUS:.c=.o)c
+OBJS_BONUS = $(BONUS:.c=.o)
 
 OBJS    = $(SRCS:.c=.o)
 
@@ -34,17 +34,17 @@ OBJS    = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME):
-		$(CC) $(CFLAGS) -c $(SRCS)
-		$(AR) $(NAME) $(OBJS)
-		$(RANLIB) $(NAME)
+		@$(CC) $(CFLAGS) -c $(SRCS)
+		@$(AR) $(NAME) $(OBJS)
+		@$(RANLIB) $(NAME)
 
 bonus: $(OBJS) $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+		@$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
 
 clean:
-		rm -f $(OBJS) $(OBJS_BONUS)
+		@rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-		rm -f $(NAME)
+		@rm -f $(NAME)
 
 re:		fclean all

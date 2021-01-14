@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 13:04:55 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/05 22:51:22 by seonchoi         ###   ########.fr       */
+/*   Created: 2021/01/11 22:02:30 by seonchoi          #+#    #+#             */
+/*   Updated: 2021/01/13 14:42:22 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t			i;
-	unsigned char	*udst;
-	unsigned char	*usrc;
+	int		len;
+	char	*str;
 
-	i = 0;
-	if (dst == '\0' && src == '\0')
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	if (!(str = (char *)malloc(sizeof(char) * len)))
 		return (NULL);
-	udst = (unsigned char *)dst;
-	usrc = (unsigned char *)src;
-	while (i < n)
-	{
-		udst[i] = usrc[i];
-		i++;
-	}
-	return (dst);
+	ft_memcpy(str, s1, ft_strlen(s1));
+	ft_memcpy(str + ft_strlen(s1), s2, ft_strlen(s2));
+	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
+	return (str);
 }

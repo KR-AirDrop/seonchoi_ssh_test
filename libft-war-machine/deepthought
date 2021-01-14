@@ -3,7 +3,7 @@ $> hostname; uname -msr
 DESKTOP-73LBH3L
 Linux 4.4.0-19041-Microsoft x86_64
 $> date
-Tue Jan  5 18:08:38 KST 2021
+Thu Jan 14 17:02:49 KST 2021
 $> gcc --version
 gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
 Copyright (C) 2017 Free Software Foundation, Inc.
@@ -18,12 +18,38 @@ norminette : command not found
 
 = Compiling libft ==============================================================
 $> make re
-[INFO] Objects removed!
-[INFO] Library [libft.a] removed!
-[INFO] Library [libft.a] created!
+ft_memcpy.c: In function ‘ft_memcpy’:
+ft_memcpy.c:22:10: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  if (dst == '\0' && src == '\0')
+          ^~
+ft_memcpy.c:22:6: note: did you mean to dereference the pointer?
+  if (dst == '\0' && src == '\0')
+      ^
+ft_memcpy.c:22:25: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  if (dst == '\0' && src == '\0')
+                         ^~
+ft_memcpy.c:22:21: note: did you mean to dereference the pointer?
+  if (dst == '\0' && src == '\0')
+                     ^
+cc1: all warnings being treated as errors
+ft_memmove.c: In function ‘ft_memmove’:
+ft_memmove.c:22:10: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  if (dst == '\0' && src == '\0')
+          ^~
+ft_memmove.c:22:6: note: did you mean to dereference the pointer?
+  if (dst == '\0' && src == '\0')
+      ^
+ft_memmove.c:22:25: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  if (dst == '\0' && src == '\0')
+                         ^~
+ft_memmove.c:22:21: note: did you mean to dereference the pointer?
+  if (dst == '\0' && src == '\0')
+                     ^
+cc1: all warnings being treated as errors
+Makefile:37: recipe for target 'libft.a' failed
+make: *** [libft.a] Error 1
 
 $> ls -la libft.a
--rwxrwxrwx 1 seonchoi seonchoi 15770 Jan  5 18:08 /mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
@@ -46,7 +72,13 @@ $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_bzero.c main.c libft.a 
 /mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_calloc.c ==================================================================
-Nothing turned in
+$> norminette ft_calloc.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_calloc.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_memcpy.c ==================================================================
 $> norminette ft_memcpy.c | grep -E '(Error|Warning)'
@@ -103,7 +135,13 @@ $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strlen.c main.c libft.a
 /mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_strdup.c ==================================================================
-Nothing turned in
+$> norminette ft_strdup.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strdup.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_strlcat.c =================================================================
 $> norminette ft_strlcat.c | grep -E '(Error|Warning)'
@@ -133,74 +171,200 @@ $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strchr.c main.c libft.a
 /mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_strrchr.c =================================================================
-Nothing turned in
+$> norminette ft_strrchr.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strrchr.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_strnstr.c =================================================================
-Nothing turned in
+$> norminette ft_strnstr.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strnstr.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_strncmp.c =================================================================
-Nothing turned in
+$> norminette ft_strncmp.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strncmp.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_atoi.c ====================================================================
-Nothing turned in
+$> norminette ft_atoi.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_atoi.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_isalpha.c =================================================================
-Nothing turned in
+$> norminette ft_isalpha.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isalpha.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_isdigit.c =================================================================
-Nothing turned in
+$> norminette ft_isdigit.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isdigit.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_isalnum.c =================================================================
-Nothing turned in
+$> norminette ft_isalnum.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isalnum.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_isascii.c =================================================================
-Nothing turned in
+$> norminette ft_isascii.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isascii.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_isprint.c =================================================================
-Nothing turned in
+$> norminette ft_isprint.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_isprint.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_toupper.c =================================================================
-Nothing turned in
+$> norminette ft_toupper.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_toupper.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_tolower.c =================================================================
-Nothing turned in
+$> norminette ft_tolower.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_tolower.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = Part2_functions ==============================================================
 
 = ft_strmapi.c =================================================================
-Nothing turned in
+$> norminette ft_strmapi.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strmapi.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_substr.c ==================================================================
-Nothing turned in
+$> norminette ft_substr.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_substr.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_strjoin.c =================================================================
-Nothing turned in
+$> norminette ft_strjoin.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strjoin.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_strtrim.c =================================================================
-Nothing turned in
+$> norminette ft_strtrim.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_strtrim.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_split.c ===================================================================
 Nothing turned in
 
 = ft_itoa.c ====================================================================
-Nothing turned in
+$> norminette ft_itoa.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_itoa.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_putchar_fd.c ==============================================================
-Nothing turned in
+$> norminette ft_putchar_fd.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putchar_fd.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_putstr_fd.c ===============================================================
-Nothing turned in
+$> norminette ft_putstr_fd.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putstr_fd.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_putendl_fd.c ==============================================================
-Nothing turned in
+$> norminette ft_putendl_fd.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putendl_fd.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_putnbr_fd.c ===============================================================
-Nothing turned in
+$> norminette ft_putnbr_fd.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_putnbr_fd.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = Bonus_functions ==============================================================
 
 = ft_lstnew.c ==================================================================
-Nothing turned in
+$> norminette ft_lstnew.c | grep -E '(Error|Warning)'
+
+norminette : command not found
+
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_lstnew.c main.c libft.a -o user_exe
+
+/mnt/c/Users/sos46/42seoul/seonchoi/libft-war-machine/srcs/check_compilation.sh: line 22: clang: command not found
 
 = ft_lstdelone.c ===============================================================
 Nothing turned in

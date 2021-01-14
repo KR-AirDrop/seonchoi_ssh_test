@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   strncmp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/05 13:04:55 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/05 22:51:22 by seonchoi         ###   ########.fr       */
+/*   Created: 2021/01/06 12:10:34 by seonchoi          #+#    #+#             */
+/*   Updated: 2021/01/06 12:12:05 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*udst;
-	unsigned char	*usrc;
+	unsigned char	*us1;
+	unsigned char	*us2;
 
-	i = 0;
-	if (dst == '\0' && src == '\0')
-		return (NULL);
-	udst = (unsigned char *)dst;
-	usrc = (unsigned char *)src;
-	while (i < n)
+	if (!n)
+		return (0);
+	us1 = (unsigned char *)s1;
+	us2 = (unsigned char *)s2;
+	while ((*us1 && (*us1 == *us2)) && --n)
 	{
-		udst[i] = usrc[i];
-		i++;
+		if (*us1 != *us2)
+			return (*us1 - *us2);
+		us1++;
+		us2++;
 	}
-	return (dst);
+	return (*us1 - *us2);
 }
