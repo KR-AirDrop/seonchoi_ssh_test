@@ -6,7 +6,7 @@
 #    By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 23:46:05 by jaleman           #+#    #+#              #
-#    Updated: 2021/01/14 16:56:45 by seonchoi         ###   ########.fr        #
+#    Updated: 2021/01/14 17:01:08 by seonchoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ OBJS_BONUS = $(BONUS:.c=.o)c
 
 OBJS    = $(SRCS:.c=.o)
 
-.PHONY: all, clean, fclean, re
+.PHONY: bonus, all, clean, fclean, re
 
 all: $(NAME)
 
@@ -42,7 +42,7 @@ bonus: $(OBJS) $(OBJS_BONUS)
 	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 clean:
-		rm -f $(OBJS)
+		rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 		rm -f $(NAME)
