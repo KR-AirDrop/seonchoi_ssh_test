@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 15:32:09 by jaleman           #+#    #+#             */
-/*   Updated: 2021/01/13 14:53:03 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/15 13:45:30 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,12 +105,10 @@ int					ft_iswspace(int c);
 /*
 ** Functions from 42 by type list.
 */
-void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstnew(void const *content, size_t content_size);
-void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+t_list				*ft_lstnew(void *content);
+void				ft_lstadd_front(t_list **alst, t_list *new);
+void				ft_lstadd_back(t_list **alst, t_list *new);
 
 /*
 ** Useful functions created during 42 Piscine.
