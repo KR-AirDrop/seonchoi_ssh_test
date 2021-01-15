@@ -6,21 +6,21 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 14:01:21 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/15 14:01:31 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/15 14:15:28 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+int		ft_lstsize(t_list *lst)
 {
-	int	count;
+	int		size;
 
-	count = 0;
+	size = 0;
 	while (lst)
 	{
 		lst = lst->next;
-		count++;
+		size++;
 	}
-	return (count);
+	return (size);
 }
