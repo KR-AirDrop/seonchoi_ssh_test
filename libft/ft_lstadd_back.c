@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 13:38:07 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/15 14:11:27 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/15 14:12:48 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list *temp;
 
 	temp = *lst;
-	if (lst == NULL)
-		return ;
-	if (*lst == NULL)
-	{
-		*lst = new;
-		return ;
-	}
-	while (temp->next != NULL)
-	{
+	while (temp->next)
 		temp = temp->next;
-	}
 	temp->next = new;
 }
