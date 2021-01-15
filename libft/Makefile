@@ -6,7 +6,7 @@
 #    By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 23:46:05 by jaleman           #+#    #+#              #
-#    Updated: 2021/01/15 13:38:33 by seonchoi         ###   ########.fr        #
+#    Updated: 2021/01/15 13:50:22 by seonchoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS    = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr
 		ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_itoa.c ft_strmapi.c \
 		ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstsize.c
 
 OBJS_BONUS = $(BONUS:.c=.o)
 
