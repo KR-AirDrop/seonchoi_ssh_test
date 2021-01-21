@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 15:32:09 by jaleman           #+#    #+#             */
-/*   Updated: 2021/01/15 14:03:11 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/21 17:04:36 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char				*ft_strnew(size_t size);
 char				*ft_strtrim(char const *s, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				**ft_split(char const *s, char c);
 
 /*
 ** Functions from 42 by type stdio.

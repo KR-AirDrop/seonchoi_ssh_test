@@ -6,12 +6,11 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:41:59 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/21 16:37:59 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/21 17:22:23 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static	int		ft_word_count(char const *s, char c)
 {
@@ -62,17 +61,4 @@ char			**ft_split(char const *s, char c)
 		}
 		return (split);
 	}
-}
-
-int				main(void)
-{
-	char *s = "      w or d count 5   ";
-	char c = ' ';
-	char **split;
-
-	printf("%d", ft_word_count(s, c));
-	split = ft_split(s, c);
-	for (int i = 0; i < 5; i++)
-		printf("%s\n", split[i]);
-	return (0);
 }
