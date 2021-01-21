@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seonchoi </var/mail/seonchoi>              +#+  +:+       +#+        */
+/*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:41:59 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/19 07:59:36 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/21 16:37:59 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
+#include <stdio.h>
 
 static	int		ft_word_count(char const *s, char c)
 {
@@ -49,7 +49,7 @@ char			**ft_split(char const *s, char c)
 		return (NULL);
 	if (!(split = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1))))
 		return (NULL);
-	while (s[start])
+	while (s[end++])
 	{
 		if (s[end] != c)
 		{
@@ -57,21 +57,22 @@ char			**ft_split(char const *s, char c)
 			while (s[end] != c && s[end])
 				end++;
 			len = end - start;
-			if (!(*split = (char *)malloc(sizeof(char) * (len + 1))))
-				return (NULL);
 			*split = ft_substr(s, start, len);
 			split++;
 		}
-
+		return (split);
 	}
-
 }
 
 int				main(void)
 {
 	char *s = "      w or d count 5   ";
 	char c = ' ';
+	char **split;
 
 	printf("%d", ft_word_count(s, c));
+	split = ft_split(s, c);
+	for (int i = 0; i < 5; i++)
+		printf("%s\n", split[i]);
 	return (0);
 }
