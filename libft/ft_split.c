@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:41:59 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/22 15:00:36 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/22 20:24:34 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,30 +36,28 @@ static	int		ft_word_count(char const *s, char c)
 
 char			**ft_split(char const *s, char c)
 {
-	int		start;
-	int		end;
-	int		len;
+	int		idx[4];
 	char	**split;
 
-	start = 0;
-	end = 0;
-	len = 0;
+	idx[0] = 0;
+	idx[1] = -1;
+	idx[2] = 0;
+	idx[3] = 0;
 	if (!s)
 		return (NULL);
 	if (!(split = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1))))
 		return (NULL);
-	while (s[end])
-	{
-		if (s[end] != c) 
+	while (s[++idx[1]])
+		if (s[idx[1]] != c)
 		{
-			start = end;
-			while (s[end] != c && s[end])
-				end++;
-			len = end - start;
-			*split = ft_substr(s, start, len);
-			split++;
+			idx[0] = idx[1];
+			while (s[idx[1]] != c && s[idx[1]])
+				idx[1]++;
+			idx[2] = idx[1] - idx[0];
+			split[idx[3]++] = ft_substr(s, idx[0], idx[2]);
+			if (s[idx[1]] == 0)
+				break ;
 		}
-		end++;
-	}
+	split[idx[3]] = NULL;
 	return (split);
 }
