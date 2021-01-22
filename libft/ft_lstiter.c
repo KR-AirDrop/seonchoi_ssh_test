@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 14:59:24 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/22 14:59:25 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/22 15:23:26 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst || !f)
+	if (lst == NULL || f == NULL)
 		return ;
 	while (lst)
 	{
-		(*f)(lst->content);
+		f(lst->content);
 		lst = lst->next;
 	}
 }
