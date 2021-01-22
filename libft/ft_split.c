@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:41:59 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/21 17:23:38 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/22 15:00:36 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,9 @@ char			**ft_split(char const *s, char c)
 		return (NULL);
 	if (!(split = (char **)malloc(sizeof(char *) * (ft_word_count(s, c) + 1))))
 		return (NULL);
-	while (s[end++])
-		if (s[end] != c)
+	while (s[end])
+	{
+		if (s[end] != c) 
 		{
 			start = end;
 			while (s[end] != c && s[end])
@@ -58,5 +59,7 @@ char			**ft_split(char const *s, char c)
 			*split = ft_substr(s, start, len);
 			split++;
 		}
+		end++;
+	}
 	return (split);
 }
