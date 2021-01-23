@@ -6,7 +6,7 @@
 /*   By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 12:41:59 by seonchoi          #+#    #+#             */
-/*   Updated: 2021/01/22 20:24:34 by seonchoi         ###   ########.fr       */
+/*   Updated: 2021/01/23 14:40:02 by seonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ static	int		ft_word_count(char const *s, char c)
 	}
 	return (count);
 }
+
+/*
+** idx[0] = start, idx[1] = end, idx[2] = len, idx[3] = i (split index)
+*/
 
 char			**ft_split(char const *s, char c)
 {

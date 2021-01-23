@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/11/03 23:46:05 by jaleman           #+#    #+#              #
-#    Updated: 2021/01/22 15:02:29 by seonchoi         ###   ########.fr        #
+#    Created: 2021/01/23 14:20:18 by seonchoi          #+#    #+#              #
+#    Updated: 2021/01/23 14:20:20 by seonchoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,6 @@ OBJS_BONUS = $(BONUS:.c=.o)
 
 OBJS    = $(SRCS:.c=.o)
 
-.PHONY: bonus, all, clean, fclean, re
-
 all: $(NAME)
 
 $(NAME):
@@ -49,3 +47,5 @@ fclean: clean
 		@rm -f $(NAME)
 
 re:		fclean all
+
+.PHONY: bonus, all, clean, fclean, re
