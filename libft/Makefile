@@ -6,14 +6,13 @@
 #    By: seonchoi <seonchoi@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/23 14:20:18 by seonchoi          #+#    #+#              #
-#    Updated: 2021/01/23 14:20:20 by seonchoi         ###   ########.fr        #
+#    Updated: 2021/01/24 00:27:59 by seonchoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC      = gcc
 CFLAGS  = -Wall -Wextra -Werror
 AR      = ar rc
-RANLIB  = ranlib
 
 NAME    = libft.a
 HEAD    = libft.h
@@ -35,7 +34,6 @@ all: $(NAME)
 $(NAME):
 		@$(CC) $(CFLAGS) -c $(SRCS)
 		@$(AR) $(NAME) $(OBJS)
-		@$(RANLIB) $(NAME)
 
 bonus: $(OBJS) $(OBJS_BONUS)
 		@$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
